@@ -1,12 +1,5 @@
 let buttons = document.getElementsByClassName('sidebar-dates-item');
 let sidebarDatesContainer = document.querySelector('.sidebar-dates-container');
-let button1 = document.querySelector('.sidebar-dates-item:nth-child(1)');
-let button2 = document.querySelector('.sidebar-dates-item:nth-child(2)');
-let button3 = document.querySelector('.sidebar-dates-item:nth-child(3)');
-let button4 = document.querySelector('.sidebar-dates-item:nth-child(4)');
-let button5 = document.querySelector('.button-5');
-
-console.log(button5.scrollTop);
 
 document.addEventListener('DOMContentLoaded', function () {
     let startIndex = 2;
