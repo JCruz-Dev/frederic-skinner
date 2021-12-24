@@ -9,11 +9,11 @@
     --primary-font: 'Bodoni Moda', serif;
     --secondary-font: 'Nunito Sans', sans-serif;
 }
-
 body {
     color: var(--white);
     background-color: var(--black);
     font-family: var(--primary-font);
+    position: relative;
 }
 body::after {
     content: '';
@@ -176,18 +176,64 @@ p {
 }
 
 .author-photo-item:nth-child(1) {
-    background-image: url(../images/img-3.png);
+    background-image: url(../images/img-3.webp);
 }
 .author-photo-item:nth-child(2) {
-    background-image: url(../images/img-2.png);
+    background-image: url(../images/img-2.webp);
 }
 .author-photo-item:nth-child(3) {
-    background-image: url(../images/img-4.png);
+    background-image: url(../images/img-4.webp);
 }
 .author-photo {
     width: 100%;
     max-width: 877px;
 }
+.sidebar-dates {
+    position: absolute;
+    right: 0;
+    top: var(--header-height);
+    bottom: 0;
+    background-color: hsla(0, 0%, 7%, 0.25);
+    height: calc(100% - var(--header-height));
+    width: 108px;
+    display: none;
+}
+.sidebar-dates-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    font-family: var(--secondary-font);
+    background: transparent;
+    border: none;
+    color: var(--white);
+}
+.sidebar-dates-item-name {
+    font-size: 0.875rem;
+    margin-right: 0.4rem;
+    opacity: 0;
+}
+.sidebar-dates-item:nth-child(1) {
+    margin-top: 15rem;
+}
+.sidebar-dates-item-line {
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--white);
+    opacity: 0.3;
+}
+.sidebar-dates-item.active .sidebar-dates-item-name {
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+.sidebar-dates-item.active .sidebar-dates-item-line {
+    width: 30px;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
 @media screen and (min-width: 48rem) {
     .header-list {
         display: flex;
@@ -222,7 +268,12 @@ p {
     .author-photo-item {
         width: 292px;
     }
+    .sidebar-dates {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     body {
-        background: url(../images/img-1.png) no-repeat center center / cover;
+        background: no-repeat center 100% / cover;
     }
 }
