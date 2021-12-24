@@ -1,7 +1,7 @@
 :root {
     --white: #ffffff;
     --grey: hsla(0, 0%, 7%, 0.5);
-    --black: hsl(0, 0%, 7%, 0.95);
+    --black: #121212f2;
     --blue: hsl(220, 100%, 59%);
     --blue-link: hsl(220, 100%, 70%);
     --header-height: 5.625rem;
@@ -23,8 +23,8 @@ body::after {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--black);
-    opacity: 0.75;
+    background-color: #18181b;
+    opacity: 1;
     z-index: -1;
 }
 p {
@@ -289,5 +289,8 @@ p {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    body::after {
+        opacity: 0.75;
     }
 }
