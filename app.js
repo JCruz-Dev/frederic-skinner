@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let startIndex = 2;
     buttons[startIndex].classList.add('active');
     document.body.style.backgroundImage = `url(../images/${buttons[startIndex].dataset.id}.webp)`;
+    document.body.style.backgroundSize = 'cover';
     sidebarDatesContainer.scrollTop = 56;
 });
 // Code for scroll on sidebardates container
@@ -36,6 +37,7 @@ for (let i = 0; i < buttons.length; i++) {
         //add the active class to the button that was clicked
         this.classList.add('active');
         document.body.style.backgroundImage = `url(../images/${this.dataset.id}.webp)`;
+        document.body.style.backgroundSize = 'cover';
         document.body.style.transition = 'background-image .7s ease-in-out';
     });
 }
