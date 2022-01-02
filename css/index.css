@@ -5,7 +5,7 @@
     --blue: hsl(220, 100%, 59%);
     --blue-link: hsl(220, 100%, 70%);
     --header-height: 5.625rem;
-    --max-width: 1340px;
+    --max-width: 1100px;
     --primary-font: 'Bodoni Moda', serif;
     --secondary-font: 'Nunito Sans', sans-serif;
 }
@@ -292,5 +292,10 @@ p {
     }
     body::after {
         opacity: 0.75;
+    }
+}
+@media screen and (min-width: 105rem) {
+    .container {
+        --max-width: 1340px;
     }
 }
